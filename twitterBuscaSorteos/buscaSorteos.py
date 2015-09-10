@@ -23,7 +23,7 @@ print ("Preparando búsqueda:")
 
 busqueda=tweepy.Cursor(api.search, q='sorteo RT',lang='es').items()
 #El string presentacion me permite avisar a mis followers que inicio al bot.
-presentacion='Atentos followers que inicio experimento con bot buscasorteos. Don\'t be afraid. Ni puto caso, vamos. Con fecha: '+time.strftime("%I:%M:%S")
+presentacion='Atentos followers que inicio experimento con bot buscasorteos. Don\'t be afraid. Con fecha: '+time.strftime("%I:%M:%S")
 print (presentacion)
 #api.update_status(status=presentacion)
 while True:
