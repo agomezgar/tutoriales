@@ -47,47 +47,14 @@ delay(100);
     }
 }
 */
-for (int a=0;a<3;a++){
-for (int i=0;i<4;i++){
-enciendeplanoxy(i,255);
 
-delay(100);
-apagatodo();
-}
-for (int i=3;i>0;i--){
-enciendeplanoxy(i,255);
-
-delay(100);
-apagatodo();
-}
-}
-for (int a=0;a<3;a++){
-for (int i=0;i<4;i++){
-enciendeplanoxz(i,255);
-
-delay(100);
-apagatodo();
-}
-for (int i=3;i>0;i--){
-enciendeplanoxz(i,255);
-
-delay(100);
-apagatodo();
-}
-}
-for (int a=0;a<3;a++){
-for (int i=0;i<4;i++){
-enciendeplanoyz(i,255);
-
-delay(100);
-apagatodo();
-}
-for (int i=3;i>0;i--){
-enciendeplanoyz(i,255);
-
-delay(100);
-apagatodo();
-}
+for (int x=0;x<4;x++){
+ for (int y=0;y<4;y++{
+  for (int z=0;z<4;z++){
+  enciendeled(x,y,z,255);
+  delay(1000);
+  }
+ } 
 }
 }
 //Encender un led especificado por fila, columna y plano
