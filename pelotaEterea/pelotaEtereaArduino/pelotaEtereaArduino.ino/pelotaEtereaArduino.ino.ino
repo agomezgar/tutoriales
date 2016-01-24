@@ -4,7 +4,6 @@ void setup()
 {
 
   Serial.begin(9600);
- // establishContact();  // send a byte to establish contact until receiver responds 
 }
 void loop()
 {
@@ -23,9 +22,4 @@ void loop()
     delay(50);
     }
 }
-void establishContact() {
-  while (Serial.available() <= 0) {
-  Serial.println("A");   // send a capital A
-  delay(300);
-  }
-}
+
