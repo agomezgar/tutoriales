@@ -9,8 +9,8 @@ byte datos[1];
 int cuenta=0;
 int currentValue = 0;
 int values[] = {0,0};
-int columnas[]={10,9,7,6,5,4,3,2};
-int fRojas,cRojas;  
+int columnas[]={2,3,4,5,6,7,9,10};
+int fRojas[8]={0,255,0,0,0,0,0,0};  
 
 void setup() {
 Serial.begin(19200);
@@ -39,39 +39,29 @@ void loop() {
     // all values sent in from Processing
   } 
 */
-while (Serial.available()>0){
- fRojas=Serial.parseInt();
- cRojas=Serial.parseInt();
-if (Serial.read() == '\n')
-        {
-   
 
+for (int i=0;i<8;i++){
+   
+digitalWrite(columnas[i],LOW);
     digitalWrite(latchPin, LOW);
 // Escribo los datos con la función shiftOut
-shiftOut(dataPin, clockPin, MSBFIRST, fRojas);  
+shiftOut(dataPin, clockPin, MSBFIRST, fRojas[i]);  
 
 
 
 //Cierro el registro para que encienda los LED
     digitalWrite(latchPin, HIGH);
+
+    digitalWrite(columnas[i],HIGH);
+ 
         }
-        ponColumnas(cRojas);
+    
   /*
  Serial.println(values[0]);
  Serial.println(values[1]);
  */
 }
-    delay(500);
-  }
-  void ponColumnas (int valor){
-    
-    for (int i=0;i<8;i++){
-      if (valor%2==1){
-        digitalWrite(columnas[i],LOW);
-      }else{
-        digitalWrite(columnas[i],HIGH);
-      }
-      valor=valor/2;
-    }
-  }
+
+  
+ 
 
