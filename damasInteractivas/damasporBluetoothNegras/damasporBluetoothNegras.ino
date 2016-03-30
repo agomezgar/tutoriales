@@ -10,7 +10,8 @@ int cuenta=0;
 int currentValue = 0;
 int values[] = {0,0};
 int columnas[]={254,253,251,247,239,223,191,127};
-int fRojas[]={5,10,5,10,5,10,5,10};  
+int fRojas[]={1,2,1,2,1,2,1,2};  
+int fAzules[]{64,128,64,128,64,128,64,128};
 
 void setup() {
 Serial.begin(19200);
@@ -34,7 +35,10 @@ escucha();
 for (int i=0;i<8;i++){
     digitalWrite(latchPin, LOW);
 // Escribo los datos con la función shiftOut
-shiftOut(dataPin, clockPin, MSBFIRST,columnas[i]);  
+shiftOut(dataPin, clockPin, MSBFIRST,columnas[i]); 
+ shiftOut(dataPin, clockPin, MSBFIRST,fAzules[i]); 
+shiftOut(dataPin, clockPin, MSBFIRST,0); 
+
 shiftOut(dataPin, clockPin, MSBFIRST, fRojas[i]); 
 //Cierro el registro para que encienda los LED
     digitalWrite(latchPin, HIGH);
