@@ -51,6 +51,9 @@ while (Serial.available()>0){
   for (int i=0;i<8;i++){
     fRojas[i]=Serial.parseInt();
   }
+    for (int i=0;i<8;i++){
+    fAzules[i]=Serial.parseInt();
+  }
 if (Serial.read()=='\n'){
   break;
 }
