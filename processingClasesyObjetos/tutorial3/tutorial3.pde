@@ -26,7 +26,7 @@ pelota [] Pelotas=new pelota[9];
 void setup(){
  size(800,600); 
 for (int i=0;i<9;i++){
- Pelotas[i]=new pelota((int)random(50),(int)random(50)); 
+ Pelotas[i]=new pelota((int)random(800),(int)random(600)); 
 }
 }
 void draw(){

@@ -31,9 +31,11 @@ void setup(){
 void draw(){
  background(255,255,255);
 
- Pelota1.dibujaPelota();
+
 Pelota1.muevePelota();
+ Pelota1.dibujaPelota();
+  Pelota2.muevePelota();
  Pelota2.dibujaPelota();
- Pelota2.muevePelota();
+
  
 }
