@@ -11,6 +11,7 @@ int valorAleatorio;
 boolean firstContact = false;
 String texto="Nº de choques: ";
 void setup() {
+  randomSeed(0);
   size(800, 600); 
   //en Serial.list()[numero], éste será el orden en que 
   //hemos conectado nuestra Arduino al USB. Ir probando con 0,1,2...
@@ -40,7 +41,7 @@ void draw() {
   }
   
   if((m.dameX()<400)&&(m.dameX()>350)&&((altura<m.dameAltura())||(altura>m.dameAltura()+100))){
-    juegoSigue=false;
+    //juegoSigue=false;
     choques++;
   }
   

@@ -1,5 +1,9 @@
 int lectura;
+
 int val;
+int vMin;
+int vMax;
+int vEnviado;
 void setup() 
 {
 
@@ -18,7 +22,10 @@ void loop()
   } 
     else {
       lectura=analogRead(A0);
-    Serial.write(lectura/4); //send back a hello world
+      if (lectura<vMin){vMin=lectura;}
+      if (lectura>vMax){vMax=lectura;}
+      vEnviado=map(lectura,vMin,vMax,0,255);
+    Serial.write(vEnviado); //send back a hello world
     delay(50);
     }
 }
