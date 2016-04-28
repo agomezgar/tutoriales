@@ -41,28 +41,20 @@ digitalWrite(azul,LOW);
 
 void loop() {
   
-while(mySerial.available()>0){
-leeColores();
+
 
  LeerDato();
  mySerial.print(resultado);
 
-analogWrite(rojo,cRojo);
-analogWrite(verde,cVerde);
-analogWrite(azul,cAzul);
+
 }
-}
-void leeColores(){
-  rojo=mySerial.parseInt();
-  verde=mySerial.parseInt();  
-  azul=mySerial.parseInt();
-}
+
  void LeerDato(){
   resultado="";
 EnviarTemperatura();
 EnviarHumedad();
 EnviarLlama();
-resultado=resultado+t+","+h+","+grados+",";
+resultado=resultado+grados+","+h+","+t+"\n";
   }
 
 
