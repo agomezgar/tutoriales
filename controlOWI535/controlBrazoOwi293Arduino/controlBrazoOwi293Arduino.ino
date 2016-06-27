@@ -1,4 +1,5 @@
 void setup(){
+     pinMode(3,OUTPUT); 
    pinMode(4,OUTPUT); 
   pinMode(5,OUTPUT); 
  pinMode(6,OUTPUT); 
@@ -40,7 +41,27 @@ else if (dato=='o'){
 else if (dato=='k'){
   bb2();
 }
+else if (dato=='i'){
+  sb3();
 }
+else if (dato=='j'){
+  bb3();
+}
+else if (dato=='u'){
+ enciendeLed();
+}
+else if (dato=='h'){
+ apagaLed();
+}
+}
+}
+void enciendeLed(){
+digitalWrite(3,HIGH);
+}
+void apagaLed(){
+digitalWrite(3,LOW);
+W
+
 }
 void gd(){
     digitalWrite(4,LOW);
