@@ -1,3 +1,14 @@
+/*
+ Test Conductores Arduino
+Este código lee y convierte los valores analógicos de dos potenciómetros en 
+las patillas A0 y A1 y las transforman a un rango entre  0 y 255,
+para a continuación enviar dichos valores por el puerto Serie.
+
+  This example code is in the public domain.
+
+  modificado el 10 de diciembre de 2016
+  by Antonio Gómez García
+ */
 int sensorPin = A0;    // select the input pin for the potentiometer
 int sensorPin2=A1;
 int sensorValue = 0;  // variable to store the value coming from the sensor
@@ -22,17 +33,7 @@ void loop() {
 
 Serial.write(sensorValue2/4);
 
-  // turn the ledPin on
-  /*
-  Serial.write('a');
-  delay(10);
-    byte         sendAnalog=sensorValue*0.24926697;
-        Serial.write(sendAnalog);
-        delay(10);
-        Serial.write('b');
-    byte         sendAnalog2=sensorValue2*0.24926697;
-        Serial.write(sendAnalog2);       
-*/
+
 delay(10);
 }
 }
