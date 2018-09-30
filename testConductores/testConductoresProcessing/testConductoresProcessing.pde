@@ -1,3 +1,12 @@
+/*
+ Test Conductores Processing
+Para utilizar con Arduino programada con el código
+'Test Conductores Arduino'
+  This example code is in the public domain.
+
+  modificado el 10 de diciembre de 2016
+  by Antonio Gómez García
+ */
 import processing.serial.*;
 
 
@@ -24,7 +33,7 @@ void setup(){
   //Tener en cuenta que hay que elegir el numero correspondiente
   //al puerto COM que estemos usando en Arduino, y ponerlo
   //en Serial.list[x]
-  miPuerto = new Serial(this, Serial.list()[1], 9600);
+  miPuerto = new Serial(this, Serial.list()[0], 9600);
 
   noStroke();
   size (800,600);
