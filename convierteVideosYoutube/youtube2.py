@@ -6,7 +6,7 @@ from tkinter import filedialog,messagebox
 from PIL import ImageTk, Image
 ventana=tk.Tk()
 def descargar(n):
-    ventana.filename =  tk.filedialog.askdirectory()+"\"+n.title+".mp3"
+    ventana.filename =  tk.filedialog.askdirectory()+"\\"+n.title+".mp3"
     print (ventana.filename)
     a=n.download()
     m4a_audio = AudioSegment.from_file(a, format="m4a")    
