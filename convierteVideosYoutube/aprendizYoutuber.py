@@ -4,6 +4,7 @@ import pafy
 import tkinter as tk
 from tkinter import filedialog,messagebox
 from PIL import ImageTk, Image
+import sys
 ventana=tk.Tk()
 
 def dameAudio():
@@ -39,7 +40,7 @@ def dameVideo():
     
     archivo = str( filedialog.askdirectory())+"/"
     ydl_opts = {
-        'format':'136+140',
+        'format':'136+140/best',
         'outtmpl': archivo+'%(title)s.%(ext)s',
     }
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
@@ -53,7 +54,6 @@ def dameVideo():
 
     #ventana.messagebox("¡Audio conseguido!")
 texto=tk.Entry(ventana)
-
 texto.pack()
 et=tk.Label(ventana,text="Introduzca URL del video a convertir")
 et.pack()
