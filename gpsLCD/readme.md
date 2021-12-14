@@ -11,3 +11,6 @@ En 4º de ESO, por otro lado, en materias como Tecnología o Tecnología Robóti
 e implementación de circuitos, se puede proponer el montaje de este dispositivo como práctica de taller. Además, si en clase se ha trabajado con Arduino, se puede volcar el código
 proporcionado en el microcontrolador como hilo conductor del estudio de conceptos como el uso de funciones aparte de ***setup()*** o ***void()***, la función del puerto
 serie, o la comunicación de Arduino como dispositivos I2C.
+
+## Librerías necesarias
+Las que yo he utilizado son **tinyGPS++** y **liquidCrystal_I2C**. Gracias a los autores. Yo me he limitado a aprovechar su trabajo.
